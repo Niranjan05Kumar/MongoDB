@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="w-full h-full bg-zinc-900 text-white p-10">
+        <nav class="w-[90%] md:w-[50%] flex gap-3 mb-8 mx-auto">
+            <a class="text-blue-500 hover:underline transition" href="/read">Go to read</a>
+        </nav>
+        <h1 class="mb-8 text-3xl w-fit mx-auto">Create user</h1>
+        <form action="/update/<%= user._id %>" method="post" class="w-[90%] md:w-[50%] flex flex-col gap-3 mx-auto">
+            <input class="w-full outline-none border-2 border-zinc-700 rounded-lg px-4 py-2" name="name"
+                placeholder="name..." value="<%= user.name %>" type="text">
+            <input class="w-full outline-none border-2 border-zinc-700 rounded-lg px-4 py-2" name="email"
+                placeholder="email..." value="<%= user.email %>" type="text">
+            <input class="w-full outline-none border-2 border-zinc-700 rounded-lg px-4 py-2" name="image"
+                placeholder="Image url..." value="<%= user.image %>" type="text">
+            <input
+                class="w-[50%] mr-auto outline-none bg-yellow-500 hover:bg-yellow-600 transition rounded-lg px-4 py-2"
+                type="submit">
+        </form>
+    </div>
+</body>
+
+</html>
